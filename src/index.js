@@ -6,8 +6,8 @@ import reportWebVitals from './reportWebVitals';
 import { legacy_createStore } from 'redux';
 import reducerGod from './reducers';
 
-
-const store = legacy_createStore(reducerGod);
+//state shows in redux tab of chrome dev tools due to redux-devtools-extension
+const store = legacy_createStore(reducerGod, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
